@@ -5,7 +5,9 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+import { TfiLinkedin } from "react-icons/tfi";
+import { TbBrandGithubFilled } from "react-icons/tb";
 import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
@@ -84,15 +86,17 @@ export default function Intro() {
         </a>
         <a
           className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition border border-black/10"
-          href=""
+          href="https://www.linkedin.com/in/leozizz/"
+          target="_blank"
         >
-          <BsLinkedin />
+          <TfiLinkedin />
         </a>
         <a
           className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition border border-black/10"
-          href=""
+          href="https://github.com/leozizz"
+          target="_blank"
         >
-          <BsGithub />
+          <TbBrandGithubFilled />
         </a>
       </motion.div>
     </section>
