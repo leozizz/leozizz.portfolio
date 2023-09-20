@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import Image from "next/image";
 import React from "react";
+
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
@@ -10,9 +11,17 @@ import { TfiLinkedin } from "react-icons/tfi";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { HiDownload } from "react-icons/hi";
 
+import { useSectionInView } from "../../lib/hooks";
+
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      id="home"
+      ref={ref}
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-36"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

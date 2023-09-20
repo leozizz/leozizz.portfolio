@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 type StringHeadingProps = {
-    children: string;
-}
+  children: string;
+};
 
-export default function SectionHeading({children}: StringHeadingProps) {
+export default function SectionHeading({ children }: StringHeadingProps) {
   return (
-    <h2 className='text-3xl font-medium capitalize mb-8 text-center'>{children}</h2>
-  )
+    <h2 className="text-3xl font-medium capitalize mb-8 text-center">
+      {children}
+    </h2>
+  );
 }
