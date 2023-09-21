@@ -35,28 +35,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Information Systems",
+    location: "Campinas, SP",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I started studying Information Systems as soon as I started my job as an IT Technician. I continue to study in parallel through courses, forums, and communities on the internet in order to develop my skills as a programmer.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
     date: "2021 - present",
+  },
+  {
+    title: "IT Technician",
+    location: "Campinas, SP",
+    description:
+      "I worked as an IT technician for almost 2 years at a company responsible for a network of schools in the city. There, I was able to work with the maintenance and assembly of computers and servers, as well as dealing with various operating systems such as Windows, Linux, and macOS.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021 - 2023",
+  },
+  {
+    title: "Front-End Developer Intern",
+    location: "Campinas, SP",
+    description:
+      "I am currently an intern in front-end development at Agibank, where I am able to put into practice everything I have learned and also learn a lot from other developers on my team. The technologies I use at the moment are JavaScript, React, Tailwind, and Styled Components.",
+    icon: React.createElement(FaReact),
+    date: "2023 - present",
   },
 ] as const;
 
@@ -90,18 +90,9 @@ export const skillsData = [
   "JavaScript",
   "TypeScript",
   "React",
-  "Next.js",
-  "Node.js",
-  "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "Next.js",
+  "Vite",
+  "Git",
   "Framer Motion",
 ] as const;
