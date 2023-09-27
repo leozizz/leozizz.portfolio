@@ -2,13 +2,19 @@ import Header from "@/src/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "../context/ActiveSectionContext";
+import ActiveSectionContextProvider from "@/src/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
-import Footer from "../components/Footer";
-import ThemeSwitch from "../components/ThemeSwitch";
-import ThemeContextProvider from "../context/themeContext";
+import Footer from "@/src/components/Footer";
+import ThemeSwitch from "@/src/components/ThemeSwitch";
+import ThemeContextProvider from "@/src/context/themeContext";
+import { i18n } from "@/src/config/i18n.config";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export async function generateStaticParams() {
+  const languages = i18n.locales.map((lang) => ({ lang }));
+  return languages;
+}
 
 export const metadata: Metadata = {
   title: "Leonardo | Personal Portfolio",
@@ -17,17 +23,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang={params.lang} className="!scroll-smooth">
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className="bg-red-200 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w[32.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-red-400"></div>
+        <div className="bg-red-200 absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w[32.25rem] rounded-full blur-[15rem] sm:w-[68.75rem] dark:bg-red-400/30 animate-blob animation-delay-2000"></div>
 
-        <div className="bg-blue-200 absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-blue-400"></div>
+        <div className="bg-blue-200 absolute top-[10rem] -z-10 left-[-35rem] h-[31.25rem] w[50rem] rounded-full blur-[15rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-blue-400/30 animate-blob animation-delay-4000"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

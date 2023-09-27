@@ -11,7 +11,12 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useTheme } from "../context/themeContext";
 
-export const Experience = () => {
+import { getDictionaryUseClient } from "../dictionaries/defaultDictionaryUseClient";
+import { Locale } from "../config/i18n.config";
+
+export const Experience = ({ params }: { params: { lang: Locale } }) => {
+  const dict = getDictionaryUseClient(params?.lang);
+
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
@@ -19,7 +24,7 @@ export const Experience = () => {
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:40">
       <SectionHeading>My Experience</SectionHeading>
       <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
+        {dict?.experiencesData?.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
@@ -47,6 +52,7 @@ export const Experience = () => {
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {/*  dangerouslySetInnerHTML={{ __html: item.description }} */}
                 {item.description}
               </p>
             </VerticalTimelineElement>
