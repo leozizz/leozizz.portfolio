@@ -10,35 +10,69 @@ export const ptBR = {
   links: [
     {
       name: "Home",
+      display: "Início",
       hash: "#home",
     },
     {
       name: "About",
+      display: "Sobre",
       hash: "#about",
     },
     {
       name: "Projects",
+      display: "Projetos",
       hash: "#projects",
     },
     {
       name: "Skills",
+      display: "Skills",
       hash: "#skills",
     },
     {
       name: "Experience",
+      display: "Experiência",
       hash: "#experience",
     },
     {
       name: "Contact",
+      display: "Contato",
       hash: "#contact",
     },
   ],
+
+  introData: {
+    intro:
+      "<strong>Olá, meu nome é Leonardo.</strong><br/> Sou um <strong>desenvolvedor front-end</strong> em treinamento. Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> e estou em um estágio com foco em <u>React</u>.",
+    contactBtn: "Entre em contato",
+    downloadCv: "Baixar CV",
+  },
+
+  aboutData: {
+    heading: "Sobre mim",
+    about: `<p className="mb-3">
+        Embora minha jornada esteja apenas começando, tive o privilégio de <span    className="font-medium">estagiar e atuar</span> nos últimos 4 meses em projetos   empolgantes que me permitiram aplicar o que aprendi na faculdade. Meu foco principal é desenvolvimento front-end, e estou particularmente entusiasmado em trabalhar com tecnologias como <span className="font-medium">ReactJS</span>.
+      </p>
+      <p className="mb-3">
+        Acredito firmemente que a chave para o sucesso no campo do desenvolvimento é a  paixão pelo aprendizado contínuo e a prontidão para enfrentar desafios de frente.  Estou totalmente dedicado a aprimorar minhas habilidades e criar
+        <span className="underline">interfaces web elegantes e funcionais.</span>.
+      </p>
+      <p className="mb-3">
+        Neste portfólio, você descobrirá alguns dos projetos em que tive a oportunidade de trabalhar até agora. Esses projetos servem como um testemunho do meu progresso e compromisso inabalável de me tornar um desenvolvedor front-end qualificado.
+      </p>
+      <p className="mb-3">
+        Se você está procurando um desenvolvedor front-end
+        <span className="underline">entusiasmado </span> e
+        <span className="underline">dedicado </span> para se juntar à sua equipe ou contribuir para o seu projeto, não hesite em entrar em contato. Estou sempre aberto a
+        <span className="font-medium">novas experiências de aprendizado</span> e
+        <span className="font-medium">portunidades de colaboração.</span>.
+      </p>`,
+  },
 
   experiencesData: [
     {
       title: "Análise e Desenvolvimento de Sistemas",
       location: "Campinas, SP",
-      description: `Comecei a estudar <strong>Análise e Desenvolvimento de Sistemas</strong> assim que comecei meu trabalho como Técnico de TI. Continuo estudando paralelamente através de cursos, fóruns e comunidades na internet para desenvolver minhas habilidades como programador.`,
+      description: `Comecei a estudar Análise e Desenvolvimento de Sistemas assim que comecei meu trabalho como Técnico de TI. Continuo estudando paralelamente através de cursos, fóruns e comunidades na internet para desenvolver minhas habilidades como programador.`,
       icon: React.createElement(LuGraduationCap),
       date: "2021 - atual",
     },
@@ -62,9 +96,9 @@ export const ptBR = {
 
   projectsData: [
     {
-      title: "Agency Landing Page",
+      title: "Landing Page - Agência de Branding",
       description:
-        "This is a Branding Agency's Single Page Application (SPA). The application includes a header with a theme toggle button and an animated banner with Lottie.",
+        "Esta é uma Aplicação de Página Única (SPA) de uma Agência de Branding. A aplicação inclui um cabeçalho com um botão de alternância de tema e um banner animado com Lottie.",
       tags: ["React", "JavaScript", "CSS", "Lottie"],
       imageUrl: reactSPAAgency,
     },
@@ -96,4 +130,12 @@ export const ptBR = {
     "Git",
     "Framer Motion",
   ],
+
+  headings: {
+    aboutMe: "Sobre Mim",
+    myProjects: "Meus Projetos",
+    mySkills: "Skills",
+    myExperience: "Minha Experiência",
+    contactMe: "Contate-me",
+  },
 } as const;

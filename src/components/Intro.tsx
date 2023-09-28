@@ -13,8 +13,12 @@ import { HiDownload } from "react-icons/hi";
 
 import { useSectionInView } from "../../lib/hooks";
 import { useActiveSectionContext } from "../context/ActiveSectionContext";
+import { getDictionaryUseClient } from "../dictionaries/defaultDictionaryUseClient";
+import { Locale } from "../config/i18n.config";
+import ReactHtmlParser from "html-react-parser";
 
-export default function Intro() {
+export default function Intro({ params }: { params: { lang: Locale } }) {
+  const dict = getDictionaryUseClient(params?.lang);
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -63,13 +67,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, my name is Leonardo.</span> I'm a{" "}
-        <span className="font-bold">Front-End Developer</span> in training,{" "}
-        <span className="font-bold">
-          currently studying Information Systems.{" "}
-        </span>
-        I am currently an intern and I am focused on Front-End Development with{" "}
-        <span className="underline">React</span>.
+        <>{ReactHtmlParser(dict?.introData?.intro)}</>
       </motion.p>
 
       <motion.div
@@ -88,7 +86,7 @@ export default function Intro() {
           }}
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 transition"
         >
-          Contact me here{" "}
+          {dict?.introData?.contactBtn}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
@@ -96,7 +94,7 @@ export default function Intro() {
           href="/CV-Leonardo.pdf"
           download={true}
         >
-          Download CV{" "}
+          {dict?.introData?.downloadCv}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
