@@ -13,14 +13,15 @@ import { HiDownload } from "react-icons/hi";
 
 import { useSectionInView } from "../../lib/hooks";
 import { useActiveSectionContext } from "../context/ActiveSectionContext";
-import { getDictionaryUseClient } from "../dictionaries/defaultDictionaryUseClient";
-import { Locale } from "../config/i18n.config";
 import ReactHtmlParser from "html-react-parser";
 
-export default function Intro({ params }: { params: { lang: Locale } }) {
-  const dict = getDictionaryUseClient(params?.lang);
+import { useTranslations } from "next-intl";
+
+export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
+  const t = useTranslations("intro");
 
   return (
     <section
@@ -67,7 +68,7 @@ export default function Intro({ params }: { params: { lang: Locale } }) {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <>{ReactHtmlParser(dict?.introData?.intro)}</>
+        {ReactHtmlParser(t.raw("title"))}
       </motion.p>
 
       <motion.div
@@ -86,7 +87,8 @@ export default function Intro({ params }: { params: { lang: Locale } }) {
           }}
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 transition"
         >
-          {dict?.introData?.contactBtn}
+          {ReactHtmlParser(t.raw("contact"))}
+
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
@@ -94,7 +96,8 @@ export default function Intro({ params }: { params: { lang: Locale } }) {
           href="/CV-Leonardo.pdf"
           download={true}
         >
-          {dict?.introData?.downloadCv}
+          {ReactHtmlParser(t.raw("cv"))}
+
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a

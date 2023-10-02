@@ -1,7 +1,7 @@
 import React from "react";
 
 type StringHeadingProps = {
-  children: string;
+  children: any;
 };
 
 export default function SectionHeading({ children }: StringHeadingProps) {
