@@ -2,14 +2,14 @@
 
 import React from "react";
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { iconsData } from "@/lib/data";
-import { useTheme } from "@/src/context/ThemeContext";
+import { useTheme } from "@/src/context/theme-context";
 import { useTranslations } from "next-intl";
 
 export default function Experience() {

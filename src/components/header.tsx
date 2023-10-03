@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/src/context/ActiveSectionContext";
+import { useActiveSectionContext } from "@/src/context/active-section-context";
 
 import { useTranslations } from "next-intl";
 

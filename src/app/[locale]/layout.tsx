@@ -1,16 +1,16 @@
-import Header from "@/src/components/Header";
+import Header from "@/src/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/src/context/ActiveSectionContext";
+import ActiveSectionContextProvider from "@/src/context/active-section-context";
 import { Toaster } from "react-hot-toast";
-import Footer from "@/src/components/Footer";
-import ThemeSwitch from "@/src/components/ThemeSwitch";
-import ThemeContextProvider from "@/src/context/ThemeContext";
+import Footer from "@/src/components/footer";
+import ThemeSwitch from "@/src/components/theme-switch";
+import ThemeContextProvider from "@/src/context/theme-context";
 
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import LanguageSwitcher from "@/src/components/LanguageSwitcher";
+import LanguageSwitcher from "@/src/components/language-switcher";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
-import { useTheme } from "@/src/context/ThemeContext";
+import { useTheme } from "@/src/context/theme-context";
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();

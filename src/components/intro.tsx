@@ -12,7 +12,7 @@ import { TbBrandGithubFilled } from "react-icons/tb";
 import { HiDownload } from "react-icons/hi";
 
 import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/src/context/ActiveSectionContext";
+import { useActiveSectionContext } from "@/src/context/active-section-context";
 import ReactHtmlParser from "html-react-parser";
 
 import { useTranslations } from "next-intl";

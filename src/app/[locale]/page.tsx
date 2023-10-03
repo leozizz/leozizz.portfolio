@@ -1,10 +1,10 @@
-import Intro from "@/src/components/Intro";
-import SectionDivider from "@/src/components/SectionDivider";
-import About from "@/src/components/About";
-import Projects from "@/src/components/Projects";
-import Skills from "@/src/components/Skills";
-import Experience from "@/src/components/Experience";
-import Contact from "@/src/components/Contact";
+import Intro from "@/src/components/intro";
+import SectionDivider from "@/src/components/section-divider";
+import About from "@/src/components/about";
+import Projects from "@/src/components/projects";
+import Skills from "@/src/components/skills";
+import Experience from "@/src/components/experience";
+import Contact from "@/src/components/contact";
 
 export default function Home() {
   return (
