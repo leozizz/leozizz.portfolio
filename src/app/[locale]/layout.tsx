@@ -10,6 +10,7 @@ import ThemeContextProvider from "@/src/context/ThemeContext";
 
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import LanguageSwitcher from "@/src/components/LanguageSwitcher";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];
@@ -31,7 +32,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   }
 
   return (
-    <html lang="en-US" className="!scroll-smooth">
+    <html lang={locale} className="!scroll-smooth">
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
@@ -47,6 +48,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
               <Footer />
               <Toaster position="top-right" reverseOrder={false} />
               <ThemeSwitch />
+              <LanguageSwitcher />
             </ActiveSectionContextProvider>
           </ThemeContextProvider>
         </NextIntlClientProvider>
