@@ -65,6 +65,9 @@
       }
     ]
   },
+  "skills": {
+    "title": "Minhas Skills"
+  },
   "experiences": {
     "title": "Minha Experiência",
     "experienceData": [

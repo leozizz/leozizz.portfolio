@@ -51,7 +51,6 @@ export default function Project({
           </ul>
         </div>
 
-        {console.log(imageUrl)}
         <Image
           src={imageUrl}
           width={452}
