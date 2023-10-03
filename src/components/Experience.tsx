@@ -9,7 +9,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { iconsData } from "@/lib/data";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "@/src/context/ThemeContext";
 import { useTranslations } from "next-intl";
 
 export default function Experience() {
