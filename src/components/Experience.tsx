@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./SectionHeading";
 import {
@@ -11,13 +11,8 @@ import "react-vertical-timeline-component/style.min.css";
 import { iconsData } from "@/lib/data";
 import { useTheme } from "../context/ThemeContext";
 import { useTranslations } from "next-intl";
-import { LuGraduationCap } from "react-icons/lu";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 
-import ReactHtmlParser from "html-react-parser";
-
-export const Experience = () => {
+export default function Experience() {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
@@ -63,4 +58,4 @@ export const Experience = () => {
       </VerticalTimeline>
     </section>
   );
-};
+}

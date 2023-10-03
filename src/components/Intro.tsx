@@ -11,8 +11,8 @@ import { TfiLinkedin } from "react-icons/tfi";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { HiDownload } from "react-icons/hi";
 
-import { useSectionInView } from "../../lib/hooks";
-import { useActiveSectionContext } from "../context/ActiveSectionContext";
+import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/src/context/ActiveSectionContext";
 import ReactHtmlParser from "html-react-parser";
 
 import { useTranslations } from "next-intl";

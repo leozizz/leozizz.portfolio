@@ -2,7 +2,6 @@
 
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import { projectsData } from "@/lib/data";
 import Project from "./Project";
 import { useSectionInView } from "@/lib/hooks";
 import { useTranslations } from "next-intl";

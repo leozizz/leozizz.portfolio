@@ -2,12 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "../context/ActiveSectionContext";
+import { useActiveSectionContext } from "@/src/context/ActiveSectionContext";
 
-import ReactHtmlParser from "html-react-parser";
 import { useTranslations } from "next-intl";
 
 export default function Header() {
