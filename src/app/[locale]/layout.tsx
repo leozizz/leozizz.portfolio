@@ -6,30 +6,33 @@ import ActiveSectionContextProvider from "@/src/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/src/components/Footer";
 import ThemeSwitch from "@/src/components/ThemeSwitch";
-import ThemeContextProvider from "@/src/context/themeContext";
-import { i18n } from "@/src/config/i18n.config";
+import ThemeContextProvider from "@/src/context/ThemeContext";
+
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import LanguageSwitcher from "@/src/components/LanguageSwitcher";
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }];
+}
 
 const inter = Inter({ subsets: ["latin"] });
-
-export async function generateStaticParams() {
-  const languages = i18n.locales.map((lang) => ({ lang }));
-  return languages;
-}
 
 export const metadata: Metadata = {
   title: "Leonardo | Personal Portfolio",
   description: "Leonardo is a intern in frontend web development",
 };
 
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
+export default async function LocaleLayout({ children, params: { locale } }) {
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
   return (
-    <html lang={params.lang} className="!scroll-smooth">
+    <html lang={locale} className="!scroll-smooth">
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
@@ -37,15 +40,18 @@ export default function RootLayout({
 
         <div className="bg-blue-200 absolute top-[10rem] -z-10 left-[-35rem] h-[31.25rem] w[50rem] rounded-full blur-[15rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-blue-400/30 animate-blob animation-delay-4000"></div>
 
-        <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
-            <Toaster position="top-right" reverseOrder={false} />
-            <ThemeSwitch />
-          </ActiveSectionContextProvider>
-        </ThemeContextProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeContextProvider>
+            <ActiveSectionContextProvider>
+              <Header />
+              {children}
+              <Footer />
+              <Toaster position="top-right" reverseOrder={false} />
+              <ThemeSwitch />
+              <LanguageSwitcher />
+            </ActiveSectionContextProvider>
+          </ThemeContextProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

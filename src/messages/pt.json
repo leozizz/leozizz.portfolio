@@ -1,0 +1,104 @@
+{
+  "links": {
+    "linksData": [
+      {
+        "name": "Home",
+        "display": "Home",
+        "hash": "#home"
+      },
+      {
+        "name": "About",
+        "display": "Sobre",
+        "hash": "#about"
+      },
+      {
+        "name": "Projects",
+        "display": "Projetos",
+        "hash": "#projects"
+      },
+      {
+        "name": "Skills",
+        "display": "Skills",
+        "hash": "#skills"
+      },
+      {
+        "name": "Experience",
+        "display": "Experiência",
+        "hash": "#experience"
+      },
+      {
+        "name": "Contact",
+        "display": "Contato",
+        "hash": "#contact"
+      }
+    ]
+  },
+  "intro": {
+    "title": "<strong>Olá, meu nome é Leonardo.</strong><br/> Sou um <strong>desenvolvedor front-end</strong> em treinamento. Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> e estou em um estágio com foco em <u>React</u>.",
+    "contact": "Entre em contato",
+    "cv": "Baixar CV"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "about": "<p className='mb-3'> Embora minha jornada esteja apenas começando, tive o privilégio de <span    className='font-medium'>estagiar e  </span> nos últimos 4 meses em projetos   empolgantes que me permitiram aplicar o que aprendi na faculdade.  oco principal é desenvolvimento front-end, e estou particularmente entusiasmado em trabalhar com  logias como <span className='font-medium'>ReactJS</span>. </p>  <p className='mb-3'> Acredito firmemente que a chave para o sucesso no campo do desenvolvimento é a  paixão pelo aprendizado contínuo  rontidão para enfrentar desafios de frente.  Estou totalmente dedicado a aprimorar minhas habilidades e  <span className='underline'>interfaces web elegantes e funcionais.</span>. </p>  <p className='mb-3'> Neste portfólio, você descobrirá alguns dos projetos em que tive a oportunidade de trabalhar até agora. Esses  tos servem como um testemunho do meu progresso e compromisso inabalável de me tornar um desenvolvedor front-end qualificado. </p>  <p className='mb-3'> Se você está procurando um desenvolvedor front-end <span className='underline'>entusiasmado </span> e <span className='underline'>dedicado </span> para se juntar à sua equipe ou contribuir para o seu projeto, não  e em entrar em contato. Estou sempre aberto a <span className='font-medium'>novas experiências de aprendizado</span> e <span className='font-medium'>portunidades de colaboração.</span>. </p>"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "projectsData": [
+      {
+        "title": "Landing Page - Agência de Branding",
+        "description": "Esta é uma Aplicação de Página Única (SPA) de uma Agência de Branding. A aplicação inclui um cabeçalho com um botão de alternância de tema e um banner animado com Lottie.",
+        "tags": ["React", "JavaScript", "CSS", "Lottie"],
+        "imageUrl": "/reactSPAAgency.png"
+      },
+      {
+        "title": "Validação de Formulário com JavaScript",
+        "description": "Formulário criado usando validação através de JavaScript. Este projeto foi criado como um desafio de treinamento fornecido pela equipe Dev em Dobro.",
+        "tags": ["JavaScript", "HTML", "CSS"],
+        "imageUrl": "/javascriptForm.png"
+      },
+      {
+        "title": "Componente de Avaliação Interativo",
+        "description": "Esta é a minha solução para o desafio do Componente de Avaliação Interativo do Frontend Mentor.",
+        "tags": ["JavaScript", "HTML", "CSS"],
+        "imageUrl": "/javascriptRating.png"
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Minha Experiência",
+    "experienceData": [
+      {
+        "title": "Análise e Desenvolvimento de Sistemas",
+        "location": "Campinas, SP",
+        "description": "Comecei a estudar Análise e Desenvolvimento de Sistemas assim que comecei meu trabalho como Técnico de TI. Continuo estudando paralelamente através de cursos, fóruns e comunidades na internet para desenvolver minhas habilidades como programador.",
+        "icon": "LuGraduationCap",
+        "date": "2021 - atual"
+      },
+      {
+        "title": "Técnico de TI",
+        "location": "Campinas, SP",
+        "description": "Trabalhei como técnico de TI por quase 2 anos em uma empresa responsável por uma rede de escolas na cidade. Lá, tive a oportunidade de trabalhar com a manutenção e montagem de computadores e servidores, bem como lidar com diversos sistemas operacionais, como Windows, Linux e macOS.",
+        "icon": "<CgWorkAlt />",
+        "date": "2021 - 2023"
+      },
+      {
+        "title": "Estagiário de Desenvolvimento Front-End",
+        "location": "Campinas, SP",
+        "description": "Atualmente sou estagiário de desenvolvimento front-end no Agibank, onde posso colocar em prática tudo o que aprendi e também aprender muito com outros desenvolvedores da minha equipe. As tecnologias que utilizo no momento são JavaScript, React, Tailwind e Styled Components.",
+        "icon": "React.createElement(FaReact)",
+        "date": "2023 - atual"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contate-me",
+    "contact": "Entre em contato comigo diretamente em <a href='mailto:leonardocps2015@gmail.com' target='_blank'><u>leonardocps2015@gmail.com</u></a> ou preencha este formulário.",
+    "email": "Seu email",
+    "message": "Sua mensagem",
+    "submit": "Enviar"
+  },
+  "footer": {
+    "footerData": "<small className='mb-2 block text-xs'> Leonardo. Todos os direitos reservados.</small><p className='text-xs'> <span className='font-semibold'>Sobre este website:</span> Feito com React & Next.js (App Router & Server Actions), Next-Intl, TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting.</p>"
+  }
+}

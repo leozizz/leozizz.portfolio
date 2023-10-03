@@ -6,13 +6,13 @@ import React, { createElement } from "react";
 import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { getDictionaryUseClient } from "../dictionaries/defaultDictionaryUseClient";
-import { Locale } from "../config/i18n.config";
 import ReactHtmlParser from "html-react-parser";
+import { useTranslations } from "next-intl";
 
-export default function About({ params }: { params: { lang: Locale } }) {
-  const dict = getDictionaryUseClient(params?.lang);
+export default function About() {
   const { ref } = useSectionInView("About");
+
+  const t = useTranslations("about");
 
   return (
     <motion.section
@@ -23,8 +23,8 @@ export default function About({ params }: { params: { lang: Locale } }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
     >
-      <SectionHeading>{dict?.aboutData?.heading}</SectionHeading>
-      <>{ReactHtmlParser(dict?.aboutData?.about)}</>
+      <SectionHeading>{ReactHtmlParser(t.raw("title"))}</SectionHeading>
+      <> {ReactHtmlParser(t.raw("about"))}</>
     </motion.section>
   );
 }

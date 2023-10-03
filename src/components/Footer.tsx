@@ -1,16 +1,17 @@
+"use client";
+
 import React from "react";
 
+import ReactHtmlParser from "html-react-parser";
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="mb-20 px-4 text-center text-gray-500">
-      <small className="mb-2 block text-xs">
-        &copy; {new Date().getFullYear()} Leonardo. All Rights Reserved.
-      </small>
-      <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
-        Framer Motion, React Email & Resend, Vercel hosting.
-      </p>
+      <small className="mb-2 text-xs">&copy; {new Date().getFullYear()}</small>
+      {ReactHtmlParser(t.raw("footerData"))}
     </footer>
   );
 }

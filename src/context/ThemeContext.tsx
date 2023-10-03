@@ -23,11 +23,11 @@ export default function ThemeContextProvider({
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-      localStorage.setItem("theme", theme);
+      localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
-      localStorage.setItem("theme", theme);
+      localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   };
