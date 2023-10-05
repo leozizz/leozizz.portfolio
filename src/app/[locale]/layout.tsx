@@ -12,9 +12,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "@/src/components/language-switcher";
 
-export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "pt" }];
-}
+// export function generateStaticParams() {
+//   return [{ locale: "en" }, { locale: "pt" }];
+// }
 
 const inter = Inter({ subsets: ["latin"] });
 
