@@ -8,6 +8,7 @@ import Footer from "@/src/components/footer";
 import ThemeSwitch from "@/src/components/theme-switch";
 import ThemeContextProvider from "@/src/context/theme-context";
 
+import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "@/src/components/language-switcher";
@@ -66,10 +67,12 @@ export default async function LocaleLayout({ children, params: { locale } }) {
             <ActiveSectionContextProvider>
               <Header />
               {children}
+
               <Footer />
               <Toaster position="top-right" reverseOrder={false} />
               <ThemeSwitch />
               <LanguageSwitcher />
+              <Analytics />
             </ActiveSectionContextProvider>
           </ThemeContextProvider>
         </NextIntlClientProvider>
