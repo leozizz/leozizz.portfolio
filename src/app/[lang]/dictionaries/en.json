@@ -1,3 +1,8 @@
 {
+  "headerLinks": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
   "description": "A simple internationalization text example"
 }
